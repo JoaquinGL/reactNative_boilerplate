@@ -6,6 +6,8 @@
 
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
+import { Button, Icon } from 'react-native-elements';
+
 
 class App extends Component {
 
@@ -17,9 +19,12 @@ class App extends Component {
 
   renderContent() {
     return (
-      <Text>
-        Hello World
-      </Text>
+      <Button
+        raised
+        icon={{name: 'home', size: 32}}
+        buttonStyle={{backgroundColor: 'red', borderRadius: 10}}
+        textStyle={{textAlign: 'center'}}
+        title={`Welcome to\nReact Native Elements`} />
     );
   }
 
@@ -27,6 +32,11 @@ class App extends Component {
     return (
       <View style= { styles.spinnerViewStyles }>
         { this.renderContent() }
+        <View>
+          <Icon
+            name='g-translate'
+            color='#00aced' />
+        </View>
       </View>
     );
   }
