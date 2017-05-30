@@ -6,7 +6,7 @@
 
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-import { Button, Icon } from 'react-native-elements';
+import { Button, Icon, PricingCard } from 'react-native-elements';
 
 
 class App extends Component {
@@ -36,6 +36,15 @@ class App extends Component {
           <Icon
             name='g-translate'
             color='#00aced' />
+        </View>
+        <View>
+        <PricingCard
+          color='#4f9deb'
+          title='Free'
+          price='$0'
+          info={['1 User', 'Basic Support', 'All Core Features']}
+          button={{ title: 'GET STARTED', icon: 'flight-takeoff' }}
+          />
         </View>
       </View>
     );
