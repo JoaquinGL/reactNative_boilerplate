@@ -8,7 +8,9 @@ import React, { Component } from 'react';
 import { View, Image, StyleSheet, Dimensions } from 'react-native';
 
 class Home extends Component {
-
+  static navigationOptions = {
+    header: null,
+  };
   render() {
     const {
       logoStyle,
@@ -31,13 +33,14 @@ var {width} = Dimensions.get('window');
 const styles = StyleSheet.create({
   containerStyle: {
     flex: 1,
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#FFF',
     position: 'relative'
   },
   logoStyle: {
-    width: width
+    width: width,
+    marginLeft: 30
   },
 })
 
