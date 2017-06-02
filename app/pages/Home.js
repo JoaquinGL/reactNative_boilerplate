@@ -5,13 +5,20 @@
 */
 
 import React, { Component } from 'react';
-import { View, Image, StyleSheet, Dimensions } from 'react-native';
+import {
+  View,
+  Image,
+  StyleSheet,
+  Dimensions,
+  TouchableOpacity
+} from 'react-native';
 
 class Home extends Component {
   static navigationOptions = {
     header: null,
   };
   render() {
+    const { navigate } = this.props.navigation;
     const {
       logoStyle,
       containerStyle,
@@ -19,10 +26,12 @@ class Home extends Component {
 
     return(
         <View style = { containerStyle }>
-          <Image
-            resizeMode= "contain"
-            style= { logoStyle }
-            source= { require('../assets/images/logoHanzo.png') } />
+          <TouchableOpacity onPress={() => navigate('Components')}>
+            <Image
+              resizeMode= "contain"
+              style= { logoStyle }
+              source= { require('../assets/images/logoHanzo.png') } />
+          </TouchableOpacity>
         </View>
     );
   }
