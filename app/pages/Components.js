@@ -16,6 +16,7 @@ import {
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import ButtonsGallery from './elements/ButtonsGallery';
+import ComponentsGallery from './elements/ComponentsGallery';
 
 let styles = {};
 
@@ -57,7 +58,7 @@ class Components extends React.Component {
         <Tab
           selectedTitleStyle={[styles.titleSelected, {marginTop: -3, marginBottom: 7}]}
           selected={selectedTab === 'home'}
-          title={selectedTab === 'home' ? 'Buttons' : null}
+          title={selectedTab === 'home' ? 'BUTTONS' : null}
           renderIcon={() => <Icon color={'#0f0f0f'} name='whatshot' size={26} />}
           renderSelectedIcon={() => <Icon color={color('blue')} name='whatshot' size={26} />}
           onPress={() => this.changeTab('home')}>
@@ -69,10 +70,10 @@ class Components extends React.Component {
           selectedTitleStyle={[styles.titleSelected, {marginTop: -3, marginBottom: 7}]}
           selected={selectedTab === 'about'}
           title={selectedTab === 'about' ? 'ABOUT' : null}
-          renderIcon={() => <Icon style={{paddingBottom: 4}} color={color('grey')} name='important-devices' size={26} />}
-          renderSelectedIcon={() => <Icon color={color('grey')} name='important-devices' size={26} />}
-          onPress={() => this.changeTab('home')}>
-          <ButtonsGallery />
+          renderIcon={() => <Icon style={{paddingBottom: 4}} color={color('grey')} name='invert-colors' size={26} />}
+          renderSelectedIcon={() => <Icon color={color('blue')} name='invert-colors' size={26} />}
+          onPress={() => this.changeTab('about')}>
+          <ComponentsGallery />
         </Tab>
       </Tabs>
     );
