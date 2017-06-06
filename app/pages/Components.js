@@ -17,6 +17,7 @@ import {
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import ButtonsGallery from './elements/ButtonsGallery';
 import ComponentsGallery from './elements/ComponentsGallery';
+import ListGallery from './elements/ListGallery';
 
 let styles = {};
 
@@ -65,15 +66,26 @@ class Components extends React.Component {
           <ButtonsGallery />
         </Tab>
         <Tab
-          tabStyle={selectedTab !== 'about' && { marginBottom: -6 }}
+          tabStyle={selectedTab !== 'components' && { marginBottom: -6 }}
           titleStyle={[styles.titleStyle, {marginTop: -1}]}
           selectedTitleStyle={[styles.titleSelected, {marginTop: -3, marginBottom: 7}]}
-          selected={selectedTab === 'about'}
-          title={selectedTab === 'about' ? 'ABOUT' : null}
+          selected={selectedTab === 'components'}
+          title={selectedTab === 'components' ? 'COMPONENTS' : null}
           renderIcon={() => <Icon style={{paddingBottom: 4}} color={color('grey')} name='invert-colors' size={26} />}
           renderSelectedIcon={() => <Icon color={color('blue')} name='invert-colors' size={26} />}
-          onPress={() => this.changeTab('about')}>
+          onPress={() => this.changeTab('components')}>
           <ComponentsGallery />
+        </Tab>
+        <Tab
+          tabStyle={selectedTab !== 'list' && { marginBottom: -6 }}
+          titleStyle={[styles.titleStyle, {marginTop: -1}]}
+          selectedTitleStyle={[styles.titleSelected, {marginTop: -3, marginBottom: 7}]}
+          selected={selectedTab === 'list'}
+          title={selectedTab === 'list' ? 'LISTS' : null}
+          renderIcon={() => <Icon style={{paddingBottom: 4}} color={color('grey')} name='contacts' size={26} />}
+          renderSelectedIcon={() => <Icon color={color('blue')} name='contacts' size={26} />}
+          onPress={() => this.changeTab('list')}>
+          <ListGallery />
         </Tab>
       </Tabs>
     );
