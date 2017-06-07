@@ -13,6 +13,10 @@ import {
   TouchableOpacity
 } from 'react-native';
 
+import {
+  Button
+} from 'react-native-elements';
+
 class Home extends Component {
   static navigationOptions = {
     header: null,
@@ -32,6 +36,24 @@ class Home extends Component {
               style= { logoStyle }
               source= { require('../assets/images/logoHanzo.png') } />
           </TouchableOpacity>
+          <Button
+            buttonStyle={styles.button}
+            backgroundColor={'#000'}
+            icon={{name: 'dashboard'}}
+            onPress={() => navigate('Components')}
+            title='Rom'/>
+          <Button
+            buttonStyle={styles.button}
+            backgroundColor={'#000'}
+            icon={{name: 'collections'}}
+            onPress={() => navigate('Components')}
+            title='Components Gallery'/>
+          <Button
+            buttonStyle={styles.button}
+            backgroundColor={'#000'}
+            icon={{name: 'credit-card'}}
+            onPress={() => navigate('Components')}
+            title='Pull & Bear'/>
         </View>
     );
   }
