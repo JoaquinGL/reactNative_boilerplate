@@ -19,7 +19,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 
 let styles = {};
 
-const log = () => {
+const log = (element) => {
   console.log('button Pressed!');
 };
 
@@ -42,6 +42,7 @@ const color = (colorType) => {
 
 class ButtonsGallery extends React.Component {
   render() {
+    const { toggleSideMenu } = this.props;
     return (
       <ScrollView style={{backgroundColor: 'white'}}>
         <View style={styles.hero}>
@@ -52,7 +53,7 @@ class ButtonsGallery extends React.Component {
           <Button
             title='BUTTON'
             backgroundColor={color('red')}
-            onPress={() => log()}
+            onPress={() => toggleSideMenu()}
             buttonStyle={styles.button} />
           <Button
             buttonStyle={styles.button}

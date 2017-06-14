@@ -15,9 +15,9 @@ import {
 } from 'react-native-elements';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import ButtonsGallery from './elements/ButtonsGallery';
-import ComponentsGallery from './elements/ComponentsGallery';
-import ListGallery from './elements/ListGallery';
+import ButtonsGallery from './ButtonsGallery';
+import ComponentsGallery from './ComponentsGallery';
+import ListGallery from './ListGallery';
 
 let styles = {};
 
@@ -53,6 +53,7 @@ class Components extends React.Component {
   }
 
   render() {
+    const { toggleSideMenu } = this.props;
     const { selectedTab } = this.state;
     return (
       <Tabs hidesTabTouch>
@@ -63,7 +64,7 @@ class Components extends React.Component {
           renderIcon={() => <Icon color={'#0f0f0f'} name='whatshot' size={26} />}
           renderSelectedIcon={() => <Icon color={color('blue')} name='whatshot' size={26} />}
           onPress={() => this.changeTab('home')}>
-          <ButtonsGallery />
+          <ButtonsGallery toggleSideMenu={toggleSideMenu} />
         </Tab>
         <Tab
           tabStyle={selectedTab !== 'components' && { marginBottom: -6 }}

@@ -5,16 +5,16 @@
 */
 
 import Home from './pages/Home';
-import Components from './pages/Components';
+import ComponentRootContainer from './pages/ComponentRootContainer';
 import Pull from './pages/Pull';
 import Rom from './pages/Rom';
 import { StackNavigator } from 'react-navigation';
 
 const App = StackNavigator({
   Home: { screen: Home },
-  Components: { screen: Components },
   Pull: { screen: Pull },
-  Rom: { screen: Rom }
+  Rom: { screen: Rom },
+  ComponentRootContainer: { screen: ComponentRootContainer }
 });
 
 

@@ -28,9 +28,9 @@ class Home extends Component {
       containerStyle,
     } = styles;
 
-    return(
+    return (
         <View style = { containerStyle }>
-          <TouchableOpacity onPress={() => navigate('Components')}>
+          <TouchableOpacity onPress={() => navigate('ComponentRootContainer')}>
             <Image
               resizeMode= "contain"
               style= { logoStyle }
@@ -40,19 +40,19 @@ class Home extends Component {
             buttonStyle={styles.button}
             backgroundColor={'#000'}
             icon={{name: 'dashboard'}}
-            onPress={() => navigate('Components')}
+            onPress={() => navigate('Rom')}
             title='Rom'/>
           <Button
             buttonStyle={styles.button}
             backgroundColor={'#000'}
             icon={{name: 'collections'}}
-            onPress={() => navigate('Components')}
+            onPress={() => navigate('ComponentRootContainer')}
             title='Components Gallery'/>
           <Button
             buttonStyle={styles.button}
             backgroundColor={'#000'}
             icon={{name: 'credit-card'}}
-            onPress={() => navigate('Components')}
+            onPress={() => navigate('ComponentRootContainer')}
             title='Pull & Bear'/>
         </View>
     );
